@@ -1,5 +1,5 @@
-SPOTIPY_CLIENT_ID='f440f13ed4ae49688beb5263c91c1d71'
-SPOTIPY_CLIENT_SECRET='62a15ca7375d412a86218b528143654c'
+SPOTIPY_CLIENT_ID= secrets.SPOTIFY_CLIENT_ID
+SPOTIPY_CLIENT_SECRET=secrets.SPOTIFY_CLIENT_SECRET
 SPOTIPY_REDIRECT_URI='http://127.0.0.1:5000/'
 SCOPE= 'user-read-currently-playing user-read-email playlist-modify-private\
                                                  user-read-private user-read-email user-top-read playlist-modify-public\
