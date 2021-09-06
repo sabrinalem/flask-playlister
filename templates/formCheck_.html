@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css?version=150>" /> 
+  </head>
+    <body>
+      <div id="loading"></div>
+      <div id="content">
+        <div class="topnav">
+          <a class="active" href="{{url_for('index')}}">|| Playlister ||</a>
+              <div class="topnav-right">
+                <a href="{{url_for('index')}}">|| Home ||</a>
+                <a href="/sign_out">|| Sign Out ||</a>
+              </div>
+          </div>
+          <br>
+        <div id='instructions'>
+          <hr>
+          <h3>SEARCH FOR SONG AS SEEN ON SPOTIFY & SELECT PLAYLISTS TO SEARCH FROM </h3>
+          <h5> checking ~1000 songs can take 3+ minutes to load data (listen to something good while you wait) </h4>
+          <hr> <br>
+          </div>
+          <div id= 'user_pl'>
+          <form class="form-text" method="POST" action="{{ url_for('formCheckHandler_') }}" autocomplete="off">
+          <label style="color: aliceblue;" for="artistName">Artist Name:</label>
+            <input type="text" id="artistName" name="artistName" >  
+          <label style="color: aliceblue;" for="songName">Song Name:</label>
+            <input type="text" id="songName" name="songName" > 
+        <br><br><br>
+            <div class="form-group">
+              <button type = "button" id = "all" onClick="selectAll()" class="choice">SELECT ALL</button>
+              <button type = "reset" id = "reset" onClick="UnSelectAll()" class="choice">RESET</button>
+              <button type="submit" id = "go" class="choice" onClick="loading();">GO</button><br><br>
+
+              <div class="input-group">
+                
+                  {% for o, v in data.items() %}
+                    <label id="select">
+                      <input type="checkbox" id="{{ o }}" name="check[]" style="display: none;" value="{{ o }}" /><label for="{{ o }}"><img src="{{ v }}" width="150" height="150" id = "albumImg"/><h6 id ="plName">{{o}}</h6></label>
+                    </label>
+                  {% endfor %} 
+              </div>
+            </div>
+            </div>
+          </form>
+        </div>
+    </body>
+
+</html>
+
+
+
+<script type="text/javascript">
+  function selectAll(){
+    var items=document.getElementsByName('check[]');
+    for(var i=0; i<items.length; i++){
+      if(items[i].type=='checkbox')
+        items[i].checked=true;
+    }
+  }
+  
+  function UnSelectAll(){
+    var items=document.getElementsByName('check[]');
+    for(var i=0; i<items.length; i++){
+      if(items[i].type=='checkbox')
+        items[i].checked=false;
+    }
+  }			
+
+</script>
+
+
+<script type="text/javascript">// <![CDATA[
+  function loading(){
+    document.getElementById("loading").style.display ="flex"
+    document.getElementById("content").style.display = "none";
+      // $("#loading").show();
+      // $("#content").hide();       
+  }
+// ]]></script>
+

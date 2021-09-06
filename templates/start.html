@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css?version=150>" />  
+</head>
+<body>
+    <div class="topnav">
+    <a class="active" href="{{ url_for('index') }}"> || Playlister ||</a>
+        <div class="topnav-right">
+            <a href="{{url_for('about')}}">|| About ||</a>
+            <a href="/sign_out">|| Sign Out ||</a>
+        </div>
+    </div>
+
+    <br><br>
+<div class =menu>
+    <a href="/playlists"><img src= '/static/duplicate.jpg' width = 330 length =330 ></a>  
+    <a href="{{ url_for('playlists_') }}" ><img src= '/static/song.jpg' width = 330 length =330 ></a>
+    <a href="{{ url_for('playlists_0') }}" ><img src= '/static/artist.jpg' width = 330 length =330 ></a>
+</div>
+</body>
+</html>

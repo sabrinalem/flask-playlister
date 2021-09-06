@@ -1,0 +1,199 @@
+body{
+    background-color: black;
+}
+#plName{
+    margin-top: 0px;
+    color: #ffffff;
+    max-width: 299px;
+    max-height: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+#instructions{
+    text-align: center;
+    color: #ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+#user_pl{
+    text-align: center;
+}
+button.choice{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #ffffff;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-weight:300;
+    color:#ffffff;
+    text-align:center;
+    transition: all 0.2s;
+    background-color:#000000;
+}
+button.choice:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+button#go:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+button#go{
+    color: #FFFFFF;
+    background-color: #47ec3857;
+}
+
+#output:hover{
+    opacity: 0.5;
+}
+
+label img{
+    opacity : 0.4;
+}
+#albumImg:hover{
+    opacity: 0.7;
+}
+input[type=checkbox]:checked + label img{
+    opacity: 1;
+}
+
+#select{
+    display: block;
+    float: left;
+    width: 25%;
+}
+input[type=text]{
+    background-color: black;
+    border: white 2px solid;
+    padding: 5px;
+    color:white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+
+}
+
+div#loading {
+    
+    display: none;
+    background-image: url(/static/loading.gif);
+    cursor: wait;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+
+#enter{
+    display:block;
+    text-align:center;
+}
+   
+a {
+    color: rgb(250, 250, 250);
+    border:rgb(250, 250, 250) 2px solid;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: lowercase;
+  }
+
+  a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black
+  }
+
+
+#empty{
+    color:#ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+
+div.one{
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h4{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    color:#ffffff;
+}
+div.one p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    color:#ffffff;
+    margin: 0 
+}
+
+div.two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display00{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.trackName{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a.active{
+    background-color: #ffffff;
+    color: #000000;
+    border: black 10px;
+}
+
+.topnav {
+    background-color: #97e7902d;
+    overflow: hidden;
+    border: none;
+  
+}
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 17px;
+  border: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  text-transform: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+  border: none;
+}
+
+div.menu{
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
