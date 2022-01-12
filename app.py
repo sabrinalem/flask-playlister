@@ -344,7 +344,7 @@ def formCheckHandler_():
     if artistName == "" or songName =="":
         return render_template("missing_.html")
 
-    q=songName
+    q="{},{}".format(songName,artistName)
     results = spotify.search(q=q, type='track')
     results_ = results['tracks']['items']
     # if items is empty 
